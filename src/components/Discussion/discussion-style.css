@@ -1,0 +1,104 @@
+:root {
+    --background-discussion: #F8F8FF;
+    --white-discussion: white;
+    --gray-light-discussion: #FAFBFC;
+    --gray-borders-discussion: #ECF1F4;
+    --gray-dark-discussion: #AEB7C2;
+    --primary-discussion: #864AF9;
+    --header-height: 5rem;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+
+.avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.discussion {
+    margin-top: var(--header-height);
+    background-color: var(--white-discussion);
+    border-radius: 1rem;
+    width: 100%;
+    min-width: 16rem;
+    max-width: 25rem;
+    user-select: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.discussion__header {
+    background-color: var(--gray-light-discussion);
+    border-bottom: var(--gray-borders-discussion);
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    overflow: hidden;
+    padding: 16px;
+    width: 100%;
+}
+
+.discussion__header textarea {
+    border: 1px solid var(--gray-borders-discussion);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    height: 3rem;
+    transition: height 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.discussion__header textarea:focus {
+    outline: none;
+    height: 5rem;
+    border: 1px solid var(--primary-discussion);
+}
+
+.comment {
+    display: flex;
+    padding: 1rem;
+    min-height: 6rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--gray-borders-discussion);
+}
+
+.newcomment__toolbar {
+    justify-content: flex-end;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem;
+}
+
+.newcomment__toolbar button {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.button--primary-discussion {
+    background-color: var(--primary-discussion);
+    color: var(--white-discussion);
+    min-width: 5rem;
+}
+
+.comment__text {
+    font-size: 0.75rem;
+}
+
+.comment__author {
+    font-size: 0.8rem;
+}
+
+.comment__date {
+    font-size: 0.75rem;
+    margin-left: 0.2rem;
+    color: var(--gray-dark-discussion);
+}
