@@ -10,11 +10,10 @@
 
 .app-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    }
+}
 
 .avatar {
     border-radius: 50%;
@@ -29,7 +28,7 @@
     border-radius: 1rem;
     width: 100%;
     min-width: 16rem;
-    max-width: 25rem;
+    max-width: 35rem;
     user-select: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

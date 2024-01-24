@@ -1,15 +1,9 @@
 import React from 'react';
-import { GlobalStyle, } from './styles/globalStyled';
-import { Header } from "./components/Header/Header";
-import { Discussion } from './components/Discussion/Discussion';
+import AppRoutes from './routes';
 
 const App = () => {
   return (
-    <>
-      <GlobalStyle />
-      <Header></Header>
-      <Discussion></Discussion>
-    </>
+    <AppRoutes/>
   );
 };
 

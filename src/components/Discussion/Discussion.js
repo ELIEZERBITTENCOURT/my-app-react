@@ -9,19 +9,19 @@ export const Discussion = () => {
 
     const users = {
         'jason1': {
-          name: 'Jason Cooper',
+          name: 'Jason Alexander',
           src: `${avatar1}`
         },
         'michelle1': {
-          name: 'Michelle Smith',
+          name: 'Michelle Claude',
           src: `${avatar2}`
         },
         'ricahrd_taylor': {
-          name: 'Ricahrd  Taylor',
+          name: 'Richard Taylor',
           src: `${avatar3}`
         },
         'jennifer': {
-          name: 'Jennifer Nováková',
+          name: 'Jennifer Floyd',
           src: `${avatar4}`
         }
       };
@@ -128,45 +128,45 @@ export const Discussion = () => {
     
       return (
         <div className="app-container">
-        <div className="discussion">
-          <div className="discussion__header">
-            <div className="authed-user">
-              <img className="avatar" src={loggedUser.src} alt={loggedUser.name} />
-            </div>
-            <form id="newcomment__form" onSubmit={handleCommentSubmit}>
-              <textarea
-                tabIndex="1"
-                cols="150"
-                rows="4"
-                minLength="5"
-                required
-                placeholder="Write a comment"
-                name="commentTextarea"
-              ></textarea>
-              <div className="newcomment__toolbar">
-                <button
-                  id="reset-button"
-                  className="button--secondary"
-                  tabIndex="3"
-                  type="reset"
-                >
-                  Reset
-                </button>
-                <button
-                  id="confirm-button"
-                  className="button--primary"
-                  tabIndex="2"
-                  type="submit"
-                >
-                  Comment
-                </button>
+          <div className="discussion">
+            <div className="discussion__header">
+              <div className="authed-user">
+                <img className="avatar" src={loggedUser.src} alt={loggedUser.name} />
               </div>
-            </form>
+              <form id="newcomment__form" onSubmit={handleCommentSubmit}>
+                <textarea
+                  tabIndex="1"
+                  cols="150"
+                  rows="4"
+                  minLength="5"
+                  required
+                  placeholder="Write a comment"
+                  name="commentTextarea"
+                ></textarea>
+                <div className="newcomment__toolbar">
+                  <button
+                    id="reset-button"
+                    className="button--secondary"
+                    tabIndex="3"
+                    type="reset"
+                  >
+                    Reset
+                  </button>
+                  <button
+                    id="confirm-button"
+                    className="button--primary"
+                    tabIndex="2"
+                    type="submit"
+                  >
+                    Comment
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="discussion__comments">
+              {comments.map(comment => createComment(comment))}
+            </div>
           </div>
-          <div className="discussion__comments">
-            {comments.map(comment => createComment(comment))}
-          </div>
-        </div>
         </div>
     );
 };
